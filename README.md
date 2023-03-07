@@ -16,7 +16,7 @@ To run the application:
    insert into category_algodomain values("Furniture", 300, 10, 18);
 5. Open Postman Tool
    Run the following URLs : 
-   Add Product : use POST method
+   1. Add Product : use POST method
    url : 
    http://localhost:8080/algodomain_task/algodomain
    Body : Raw :JSON
@@ -30,3 +30,24 @@ To run the application:
         "productPrice" : 350
     }
     Likewise add all the products
+   2. Get Final Price of Product : use GET method
+   url : 
+   http://localhost:8080/algodomain_task/algodomain/1003
+    3. Delete Product : use DELETE method
+    url : 
+    http://localhost:8080/algodomain_task/algodomain/1003
+    4. Update Product : use PUT method
+    url : 
+    http://localhost:8080/algodomain_task/algodomain
+   Body : Raw : JSON
+    {
+        "productId" : 1005,
+        "productName": "Neelkamal Chair",
+        "productType": "Sofa Set",
+        "productCategory": {
+            "productCategory": "Furniture"
+        	},
+        "productPrice" : 500
+    }
+    5. Get All Products : use GET method
+    url : http://localhost:8080/algodomain_task/algodomain
